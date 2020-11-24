@@ -21,6 +21,14 @@ const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
           loadChildren: () => import('./admin/admin-routing.module').then(m => m.AdminRoutingModule)
         },
         {
+          path: 'accueil',
+          data: {
+            authorities: ['ROLE_USER']
+          },
+          canActivate: [UserRouteAccessService],
+          loadChildren: () => import('./accueil/accueil.module').then(m => m.AccueilModule)
+        },
+        {
           path: 'account',
           loadChildren: () => import('./account/account.module').then(m => m.BeOpenMindAppAccountModule)
         },
