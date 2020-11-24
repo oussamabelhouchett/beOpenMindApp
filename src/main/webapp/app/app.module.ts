@@ -6,6 +6,7 @@ import { BeOpenMindAppSharedModule } from 'app/shared/shared.module';
 import { BeOpenMindAppCoreModule } from 'app/core/core.module';
 import { BeOpenMindAppAppRoutingModule } from './app-routing.module';
 import { BeOpenMindAppHomeModule } from './home/home.module';
+import { LoginModule } from './../login/login.module';
 import { BeOpenMindAppEntityModule } from './entities/entity.module';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent } from './layouts/main/main.component';
@@ -20,6 +21,7 @@ import { ErrorComponent } from './layouts/error/error.component';
     BeOpenMindAppSharedModule,
     BeOpenMindAppCoreModule,
     BeOpenMindAppHomeModule,
+    LoginModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
     BeOpenMindAppEntityModule,
     BeOpenMindAppAppRoutingModule
