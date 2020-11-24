@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { BeOpenMindAppSharedModule } from 'app/shared/shared.module';
-import { HOME_ROUTE } from './home.route';
-import { HomeComponent } from './home.component';
+import { AccueilComponent } from './accueil.component';
+import { ACCUEIL_ROUTE } from './accueil.route';
+
 
 @NgModule({
-  imports: [BeOpenMindAppSharedModule, RouterModule.forChild([HOME_ROUTE])],
-  declarations: [HomeComponent]
+  imports: [BeOpenMindAppSharedModule, RouterModule.forChild([ACCUEIL_ROUTE])],
+  declarations: [AccueilComponent]
 })
-export class BeOpenMindAppHomeModule {}
+export class AccueilModule {}

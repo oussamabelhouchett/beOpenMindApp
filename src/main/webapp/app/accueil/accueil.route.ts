@@ -1,10 +1,11 @@
 import { Route } from '@angular/router';
+import { AccueilComponent } from './accueil.component';
 
-import { HomeComponent } from './home.component';
 
-export const HOME_ROUTE: Route = {
+
+export const ACCUEIL_ROUTE: Route = {
   path: '',
-  component: HomeComponent,
+  component: AccueilComponent,
   data: {
     authorities: [],
     pageTitle: 'Welcome, Java Hipster!'

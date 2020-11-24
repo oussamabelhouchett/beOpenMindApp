@@ -8,11 +8,11 @@ import { AccountService } from 'app/core/auth/account.service';
 import { Account } from 'app/core/user/account.model';
 
 @Component({
-  selector: 'jhi-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['home.scss']
+  selector: 'jhi-accueil',
+  templateUrl: './accueil.component.html',
+  styleUrls: ['accueil.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class AccueilComponent implements OnInit, OnDestroy {
   account: Account;
   authSubscription: Subscription;
   modalRef: NgbModalRef;
