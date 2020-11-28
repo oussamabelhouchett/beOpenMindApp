@@ -17,7 +17,7 @@
     "devDatabaseType": "mysql",
     "prodDatabaseType": "mysql",
     "searchEngine": "elasticsearch",
-    "messageBroker": false,
+    "messageBroker": "kafka",
     "serviceDiscoveryType": "eureka",
     "buildTool": "maven",
     "enableSwaggerCodegen": false,
@@ -28,9 +28,7 @@
     "clientFramework": "angularX",
     "clientTheme": "none",
     "clientThemeVariant": "",
-    "testFrameworks": [
-      "protractor"
-    ],
+    "testFrameworks": ["protractor"],
     "jhiPrefix": "jhi",
     "entitySuffix": "",
     "dtoSuffix": "DTO",
