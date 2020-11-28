@@ -166,6 +166,35 @@ jhipster:
     contact-email:
     license:
     license-url:
+
+kafka:
+  bootstrap.servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+  polling.timeout: 10000
+  consumer:
+    comments:
+      enabled: true
+      '[key.deserializer]': org.apache.kafka.common.serialization.StringDeserializer
+      '[value.deserializer]': com.project.service.kafka.serde.CommentsDeserializer
+      '[group.id]': be-open-mind-app
+      '[auto.offset.reset]': earliest
+    post:
+      enabled: true
+      '[key.deserializer]': org.apache.kafka.common.serialization.StringDeserializer
+      '[value.deserializer]': com.project.service.kafka.serde.PostDeserializer
+      '[group.id]': be-open-mind-app
+      '[auto.offset.reset]': earliest
+  producer:
+    comments:
+      enabled: true
+      '[key.serializer]': org.apache.kafka.common.serialization.StringSerializer
+      '[value.serializer]': com.project.service.kafka.serde.CommentsSerializer
+    post:
+      enabled: true
+      '[key.serializer]': org.apache.kafka.common.serialization.StringSerializer
+      '[value.serializer]': com.project.service.kafka.serde.PostSerializer
+  topic:
+    comments: queuing.be_open_mind_app.comments
+    post: queuing.be_open_mind_app.post
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class
