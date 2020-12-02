@@ -1,0 +1,7 @@
+entity ApplicationUser {
+  additionalField Integer min(42) max(42)
+}
+
+relationship OneToOne {
+  ApplicationUser{internalUser} to User
+}

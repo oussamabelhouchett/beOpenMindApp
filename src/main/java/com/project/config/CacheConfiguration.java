@@ -50,6 +50,7 @@ public class CacheConfiguration {
             createCache(cm, com.project.domain.Post.class.getName() + ".filesPosts");
             createCache(cm, com.project.domain.FilesPost.class.getName());
             createCache(cm, com.project.domain.Comments.class.getName());
+            createCache(cm, com.project.domain.ApplicationUser.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
